@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-21T21:31:59.012Z",
+    "end": "2020-05-21T21:32:58.005Z",
+    "duration": 58993,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bebd5804-90cd-4674-82e5-bd3ae9b17b50",
+      "title": "",
+      "fullFile": "cypress\\integration\\registration.spec.js",
+      "file": "cypress\\integration\\registration.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "82a1f4bc-7dcb-4bb6-b39f-b22dd1ce48cb",
+          "title": "Register User Scenario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that user can be sign up and proper fields/validation error are appearing",
+              "fullTitle": "Register User Scenario Verify that user can be sign up and proper fields/validation error are appearing",
+              "timedOut": null,
+              "duration": 54789,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.select-signin').should('contain', 'Sign in').click();\ncy.get('.select-register').should('contain', 'Register').click();\ncy.get('.col-xs-12').should('contain', 'Create your account').and('contain', 'Registration is easy.').and('contain', 'Email address').and('contain', 'First name').and('contain', 'Password');\ncy.get('[name=\"submit_attempt\"]').click();\nvar errorID = ['[id=\"aria-join_neu_email_field-error\"]', '[id=\"aria-join_neu_first_name_field-error\"]', '[id=\"aria-join_neu_password_field-error\"]'];\nerrorID.forEach(function (ID) {\n  cy.get(ID).should('contain', 'Can\\'t be blank.');\n}); //Code handle in command.js      \ncy.registration(email, username, password);\ncy.get('.sign-out').click();",
+              "err": {},
+              "uuid": "539b953d-5ffc-4ca1-9f15-729432b256d1",
+              "parentUUID": "82a1f4bc-7dcb-4bb6-b39f-b22dd1ce48cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "539b953d-5ffc-4ca1-9f15-729432b256d1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 54789,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

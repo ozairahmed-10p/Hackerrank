@@ -1,0 +1,280 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-21T21:33:07.350Z",
+    "end": "2020-05-21T21:33:07.350Z",
+    "duration": 263454,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "becf56ee-646b-47ef-8cf6-b680d8f242ae",
+      "title": "",
+      "fullFile": "cypress\\integration\\multiple_logins.spec.js",
+      "file": "cypress\\integration\\multiple_logins.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f4872e8-54be-4b70-8b8d-fccc9b459861",
+          "title": "Multiple Login Scenarios",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign In Flow Test for user : johncooper",
+              "fullTitle": "Multiple Login Scenarios Sign In Flow Test for user : johncooper",
+              "timedOut": null,
+              "duration": 58264,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Following multiple sign in case is blocker due to REQUEST THROTTLE issue that deactivate the account.\n//Applied cy.wait but still facing the same issue so alternative solution: automate the multiple user sign in \n//verification via registration flow.\n// cy.get('.select-signin')\n//   .click()  \n// cy.get('[id=\"join_neu_email_field\"]')\n//   .type(cred.email)\n// cy.get('[id=\"join_neu_password_field\"]')\n//   .type(cred.pass)\n// cy.wait(10000)  \n// cy.get('[name=\"submit_attempt\"]')  \n//   .click()\n// cy.wait(10000)\ncy.get('.select-signin').should('contain', 'Sign in').click();\ncy.get('.select-register').should('contain', 'Register').click(); //Code handle in command.js        \ncy.registration(cred.user + rand + \"@gmail.com\", cred.user, cred.pass);\ncy.get('.sign-out').click();",
+              "err": {},
+              "uuid": "a86f0ede-8192-409a-9dd6-44e2728b380e",
+              "parentUUID": "6f4872e8-54be-4b70-8b8d-fccc9b459861",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sign In Flow Test for user : johncarlos",
+              "fullTitle": "Multiple Login Scenarios Sign In Flow Test for user : johncarlos",
+              "timedOut": null,
+              "duration": 48599,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Following multiple sign in case is blocker due to REQUEST THROTTLE issue that deactivate the account.\n//Applied cy.wait but still facing the same issue so alternative solution: automate the multiple user sign in \n//verification via registration flow.\n// cy.get('.select-signin')\n//   .click()  \n// cy.get('[id=\"join_neu_email_field\"]')\n//   .type(cred.email)\n// cy.get('[id=\"join_neu_password_field\"]')\n//   .type(cred.pass)\n// cy.wait(10000)  \n// cy.get('[name=\"submit_attempt\"]')  \n//   .click()\n// cy.wait(10000)\ncy.get('.select-signin').should('contain', 'Sign in').click();\ncy.get('.select-register').should('contain', 'Register').click(); //Code handle in command.js        \ncy.registration(cred.user + rand + \"@gmail.com\", cred.user, cred.pass);\ncy.get('.sign-out').click();",
+              "err": {},
+              "uuid": "9694ac11-8d0f-4368-9f73-42c10a3a3732",
+              "parentUUID": "6f4872e8-54be-4b70-8b8d-fccc9b459861",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sign In Flow Test for user : johnwick",
+              "fullTitle": "Multiple Login Scenarios Sign In Flow Test for user : johnwick",
+              "timedOut": null,
+              "duration": 22602,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Following multiple sign in case is blocker due to REQUEST THROTTLE issue that deactivate the account.\n//Applied cy.wait but still facing the same issue so alternative solution: automate the multiple user sign in \n//verification via registration flow.\n// cy.get('.select-signin')\n//   .click()  \n// cy.get('[id=\"join_neu_email_field\"]')\n//   .type(cred.email)\n// cy.get('[id=\"join_neu_password_field\"]')\n//   .type(cred.pass)\n// cy.wait(10000)  \n// cy.get('[name=\"submit_attempt\"]')  \n//   .click()\n// cy.wait(10000)\ncy.get('.select-signin').should('contain', 'Sign in').click();\ncy.get('.select-register').should('contain', 'Register').click(); //Code handle in command.js        \ncy.registration(cred.user + rand + \"@gmail.com\", cred.user, cred.pass);\ncy.get('.sign-out').click();",
+              "err": {},
+              "uuid": "ad7d5050-b41f-4819-adff-6f8764d134c0",
+              "parentUUID": "6f4872e8-54be-4b70-8b8d-fccc9b459861",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify validation error on login failure",
+              "fullTitle": "Multiple Login Scenarios Verify validation error on login failure",
+              "timedOut": null,
+              "duration": 16472,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.select-signin').should('contain', 'Sign in').click();\ncy.get('[id=\"join_neu_email_field\"]').type('babyshark1@gmail.com');\ncy.get('[id=\"join_neu_password_field\"]').type('check1234');\ncy.get('[name=\"submit_attempt\"]').click();\ncy.get('[id=\"aria-join_neu_email_field-error\"]').should('contain', 'Email address is invalid.');",
+              "err": {},
+              "uuid": "c1a49151-672d-4f10-8c62-ce5378fc5a86",
+              "parentUUID": "6f4872e8-54be-4b70-8b8d-fccc9b459861",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a86f0ede-8192-409a-9dd6-44e2728b380e",
+            "9694ac11-8d0f-4368-9f73-42c10a3a3732",
+            "ad7d5050-b41f-4819-adff-6f8764d134c0",
+            "c1a49151-672d-4f10-8c62-ce5378fc5a86"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 145937,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bebd5804-90cd-4674-82e5-bd3ae9b17b50",
+      "title": "",
+      "fullFile": "cypress\\integration\\registration.spec.js",
+      "file": "cypress\\integration\\registration.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "82a1f4bc-7dcb-4bb6-b39f-b22dd1ce48cb",
+          "title": "Register User Scenario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that user can be sign up and proper fields/validation error are appearing",
+              "fullTitle": "Register User Scenario Verify that user can be sign up and proper fields/validation error are appearing",
+              "timedOut": null,
+              "duration": 54789,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.select-signin').should('contain', 'Sign in').click();\ncy.get('.select-register').should('contain', 'Register').click();\ncy.get('.col-xs-12').should('contain', 'Create your account').and('contain', 'Registration is easy.').and('contain', 'Email address').and('contain', 'First name').and('contain', 'Password');\ncy.get('[name=\"submit_attempt\"]').click();\nvar errorID = ['[id=\"aria-join_neu_email_field-error\"]', '[id=\"aria-join_neu_first_name_field-error\"]', '[id=\"aria-join_neu_password_field-error\"]'];\nerrorID.forEach(function (ID) {\n  cy.get(ID).should('contain', 'Can\\'t be blank.');\n}); //Code handle in command.js      \ncy.registration(email, username, password);\ncy.get('.sign-out').click();",
+              "err": {},
+              "uuid": "539b953d-5ffc-4ca1-9f15-729432b256d1",
+              "parentUUID": "82a1f4bc-7dcb-4bb6-b39f-b22dd1ce48cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "539b953d-5ffc-4ca1-9f15-729432b256d1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 54789,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4bd4551c-7c33-46dc-a796-d5c73391c274",
+      "title": "",
+      "fullFile": "cypress\\integration\\add_cart.spec.js",
+      "file": "cypress\\integration\\add_cart.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "10df19df-4f77-474b-96f7-9ef7512da701",
+          "title": "Add Cart Scenario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify product information and adding it in cart",
+              "fullTitle": "Add Cart Scenario Verify product information and adding it in cart",
+              "timedOut": null,
+              "duration": 62728,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[id=\"listing-page-cart\"]').should('contain', productName).and('contain', productDesc).and('contain', productPrice);\ncy.get('[type=\"submit\"]').contains('Add to basket').click(); //Cart screen  \ncy.get('[id=\"page-title\"]').should('contain', '1 item in your basket');\ncy.get('.multi-shop-cart-single').should('contain', productName).and('contain', productDesc).and('contain', productPrice).contains('Remove').click();\ncy.get('[id=\"newempty\"]').should('contain', 'Your basket is empty.');",
+              "err": {},
+              "uuid": "396755c5-1e27-4840-b632-2627eefe1bd2",
+              "parentUUID": "10df19df-4f77-474b-96f7-9ef7512da701",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "396755c5-1e27-4840-b632-2627eefe1bd2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 62728,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

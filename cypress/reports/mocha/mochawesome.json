@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-21T21:27:34.040Z",
+    "end": "2020-05-21T21:28:44.262Z",
+    "duration": 70222,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4bd4551c-7c33-46dc-a796-d5c73391c274",
+      "title": "",
+      "fullFile": "cypress\\integration\\add_cart.spec.js",
+      "file": "cypress\\integration\\add_cart.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "10df19df-4f77-474b-96f7-9ef7512da701",
+          "title": "Add Cart Scenario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify product information and adding it in cart",
+              "fullTitle": "Add Cart Scenario Verify product information and adding it in cart",
+              "timedOut": null,
+              "duration": 62728,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[id=\"listing-page-cart\"]').should('contain', productName).and('contain', productDesc).and('contain', productPrice);\ncy.get('[type=\"submit\"]').contains('Add to basket').click(); //Cart screen  \ncy.get('[id=\"page-title\"]').should('contain', '1 item in your basket');\ncy.get('.multi-shop-cart-single').should('contain', productName).and('contain', productDesc).and('contain', productPrice).contains('Remove').click();\ncy.get('[id=\"newempty\"]').should('contain', 'Your basket is empty.');",
+              "err": {},
+              "uuid": "396755c5-1e27-4840-b632-2627eefe1bd2",
+              "parentUUID": "10df19df-4f77-474b-96f7-9ef7512da701",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "396755c5-1e27-4840-b632-2627eefe1bd2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 62728,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
